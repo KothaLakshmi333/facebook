@@ -1,0 +1,1079 @@
+* {
+	font-family: 'Roboto condensed', sans-serif;
+
+}
+
+
+.nav {
+	z-index: 2;
+	position: relative;
+	display: flex;
+	height: 90px;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0px 1px 3px #ccc;
+	justify-content: space-between;
+}
+
+
+.nav-left {
+	position: relative;
+	width: 30%;
+	height: 100%;
+	background-color: none;
+	margin-top: 1%;
+}
+
+.nav-left img {
+	position: absolute;
+	width: 50px;
+	border-radius: 50px;
+	margin-top: 1.5%;
+	margin-left: 3%;
+}
+
+.nav-left input {
+	height: 40px;
+	position: relative;
+	border: none;
+	border-radius: 25px;
+
+	background-color: #eee;
+	margin-left: 25%;
+	text-align: center;
+	margin-top: 3%;
+	width: 200px;
+}
+
+.nav-middle {
+	position: absolute;
+	height: 60%;
+	width: 30%;
+	background-color: none;
+	margin-left: 35%;
+	display: flex;
+
+}
+
+.nav-middle a {
+	height: 30px;
+	width: 50px;
+	font-size: 25px;
+	margin-top: 10%;
+	margin-left: 15%;
+	color: black;
+	text-align: center;
+
+}
+
+.nav-middle .active {
+	color: royalblue;
+	position: relative;
+}
+
+.nav-middle .active::after {
+	content: '';
+	width: 100%;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	background: royalblue;
+	position: absolute;
+}
+
+.nav-middle a:hover {
+	cursor: pointer;
+	background: #ccc;
+}
+
+.nav-right {
+	margin-top: 1%;
+	position: absolute;
+	height: 100%;
+	width: 20%;
+	background-color: none;
+	margin-left: 88%;
+	display: flex;
+}
+
+
+.nav-right .profile {
+	background: url('./images/dp.jpg');
+}
+
+
+.nav-right a {
+	height: 30px;
+	width: 30px;
+	background-size: cover;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #ccc;
+	margin-left: 20%;
+	margin-top: 6%;
+}
+
+.nav-right .profile {
+	height: 30px;
+	width: 30px;
+	background-size: cover;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #ccc;
+	margin-left: 3%;
+	margin-top: 6%;
+}
+
+.nav-right a>i {
+	margin-left: 30%;
+	margin-top: 30%;
+	color: black;
+
+}
+
+.container {
+	position: relative;
+	background-color: #eee;
+	;
+	margin-top: 0%;
+	height: 700px;
+	width: 100%px;
+}
+
+.container .left-panel {
+	position: absolute;
+	background-color: none;
+	width: 20%;
+	margin-left: 0%;
+}
+
+.container .left-panel .profile {
+	background: url('./images/dp.jpg');
+	height: 30px;
+	width: 30px;
+	background-size: cover;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.container .left-panel ul {
+	list-style: none;
+	padding: 1px 10px;
+}
+
+.container .left-panel ul li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	transition: .3s;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.container .left-panel ul li p {
+	padding-left: 10px;
+}
+
+.container .left-panel ul li:hover {
+	background: #ddd;
+}
+
+.container .left-panel ul li>i {
+	font-size: 20px;
+	color: slateblue;
+}
+
+.container .left-panel ul li>i.fa-calendar-week {
+	color: tomato;
+}
+
+.container .left-panel ul li i.fa-briefcase {
+	color: green;
+}
+
+.container .left-panel ul li i.fa-star {
+	color: yellowgreen;
+}
+
+.container .left-panel ul li i.fa-hands-helping {
+	color: indianred;
+}
+
+.container .left-panel .footer-links {
+	padding: 5px 5px;
+
+}
+
+.container .left-panel .footer-links a {
+	padding: 0px 3px;
+	text-decoration: none;
+	color: black;
+}
+
+.container .middle-panel {
+	position: absolute;
+	background-color: none;
+	width: 55%;
+	height: 100%;
+	margin-left: 21%;
+	align-items: center;
+	overflow-x: scroll;
+}
+
+.story-section {
+	position: absolute;
+	background-color: none;
+	height: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	top: 2%;
+
+}
+
+.story {
+	position: relative;
+	height: 50%;
+	background-image: url("./images/dp.jpg");
+	width: 18%;
+	border-radius: 20px;
+	background-size: cover;
+
+}
+
+.story1 {
+	position: relative;
+	height: 50%;
+	background-image: url("./images/model.jpg");
+	width: 18%;
+	border-radius: 20px;
+	background-size: cover;
+
+}
+
+.story2 {
+	position: relative;
+	height: 50%;
+	background-image: url("./images/boy.jpg");
+	width: 18%;
+	border-radius: 20px;
+	background-size: cover;
+
+}
+
+.story3 {
+	position: relative;
+	height: 50%;
+	background-image: url("./images/mountains.jpg");
+	width: 18%;
+	border-radius: 20px;
+	background-size: cover;
+
+}
+
+.story4 {
+	position: relative;
+	height: 50%;
+	background-image: url("./images/shoes.jpg");
+	width: 18%;
+	border-radius: 20px;
+	background-size: cover;
+
+}
+
+.dp-container img {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid royalblue;
+	background-size: cover;
+	margin-top: 5%;
+	margin-left: 5%;
+}
+
+.name {
+	position: absolute;
+	bottom: 10px;
+	left: 0px;
+	padding: 5px;
+	color: white;
+	font-weight: bold;
+	width: 100%;
+	height: 20%;
+	margin-left: 10%;
+	font-size: 15px;
+}
+
+.story .name1 {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 5px;
+	background-color: #fff;
+	font-weight: bold;
+	width: 93%;
+	height: 25%;
+	text-align: center;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+}
+
+.name1 p {
+	margin-top: 14%;
+
+}
+
+.story .dp-container {
+	position: absolute;
+	background-color: royalblue;
+	bottom: 17%;
+	z-index: 3;
+	font-size: 25px;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	text-align: center;
+	left: 35%;
+	border: 3px solid white;
+}
+
+.story .dp-container .fa {
+	margin-top: 1%;
+	color: white;
+}
+
+.post {
+	position: relative;
+	height: 15%;
+	width: 90%;
+	background-color: white;
+	margin-left: 5%;
+	border-radius: 10px;
+	margin-top: 32%;
+}
+
+.post .dp img {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: cover;
+	margin-top: 2%;
+	margin-left: 4%;
+}
+
+.post input {
+	height: 30px;
+	position: absolute;
+	border: none;
+	border-radius: 25px;
+
+	background-color: #eee;
+	margin-left: 12%;
+	text-align: center;
+	margin-top: 3%;
+	width: 75%;
+
+}
+
+.post .post-bottom,
+.post2 .post-bottom,
+.post3 .post-bottom,
+.post4 .post-bottom {
+	position: absolute;
+	width: 93%;
+	display: flex;
+	background-color: none;
+	bottom: 10%;
+	margin-left: 5%;
+	justify-content: space-between;
+}
+
+.card {
+	margin-top: 10%;
+	background-color: gray;
+	width: 85%;
+	margin-left: 5%;
+	padding: 20px;
+	color: white;
+}
+
+.action {
+	color: orange;
+
+}
+
+.post1 {
+
+	height: 200px;
+	margin-top: 6%;
+	background-color: white;
+	width: 90%;
+	margin-left: 5%;
+	border-radius: 10px;
+
+	/* height: 25%;
+	width: 90%;
+	background-color: white;
+	margin-left: 5%;
+	border-radius: 10px;
+	margin-top: 10%; */
+}
+
+.post1 .dp img {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: cover;
+	margin-top: 3%;
+	margin-left: 3%;
+}
+
+.post1 .post-info {
+	position: absolute;
+	margin-left: 13%;
+	margin-top: 0.5%;
+
+}
+
+.post1 .last {
+	position: absolute;
+	margin-left: 85%;
+	margin-top: 3%;
+}
+
+.post1 .post-data {
+	position: absolute;
+	margin-top: 10%;
+	margin-left: 5%;
+
+}
+
+.post1 .post-bottom {
+	position: absolute;
+	width: 80%;
+	display: flex;
+	background-color: none;
+	margin-left: 5%;
+	margin-top: 17%;
+	justify-content: space-between;
+}
+.post1 .likecard {
+	position: absolute;
+    margin-top: 22%;
+	margin-left: 5%;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.white-text {
+    color: none;
+}
+
+.fa,
+.far {
+	cursor: pointer;
+}
+
+.post2 {
+	position: relative;
+	height: 65%;
+	width: 90%;
+	background-color: white;
+	margin-left: 5%;
+	border-radius: 10px;
+	margin-top: 6%;
+	box-shadow: 0px 1px 3px #ccc;
+}
+
+.post2 .dp img {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: cover;
+	margin-top: 3%;
+	margin-left: 4%;
+
+}
+
+.post2 .line {
+	position: absolute;
+	left: 4%;
+	top: 12%;
+}
+
+.post2 .post-info {
+	position: absolute;
+	left: 12%;
+	top: 1%;
+}
+
+.post2 .last {
+	position: absolute;
+	right: 3%;
+	top: 8%
+}
+
+.post2 .post-content p {
+	top: 30%;
+}
+
+.post2 .post-content img {
+	position: absolute;
+	width: 93%;
+	height: 320px;
+	top: 20%;
+	left: 3.5%;
+}
+
+.post2 .post-bottom {
+	bottom: 2%;
+}
+
+.post3 {
+	position: relative;
+	height: 65%;
+	width: 90%;
+	background-color: white;
+	margin-left: 5%;
+	border-radius: 10px;
+	margin-top: 5%;
+	box-shadow: 0px 1px 3px #ccc;
+}
+
+.post3 .dp img {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: cover;
+	margin-top: 3%;
+	margin-left: 4%;
+
+}
+
+.post3 .line {
+	position: absolute;
+	left: 4%;
+	top: 12%;
+}
+
+.post3 .post-info {
+	position: absolute;
+	left: 12%;
+	top: 1%;
+}
+
+.post3 .last {
+	position: absolute;
+	right: 3%;
+	top: 8%
+}
+
+.post3 .post-content p {
+	top: 30%;
+}
+
+.post3 .post-content img {
+	position: absolute;
+	width: 93%;
+	height: 320px;
+	top: 20%;
+	left: 3.5%;
+}
+
+.post3 .post-bottom {
+	bottom: 2%;
+}
+
+.post4 {
+	position: relative;
+	height: 95%;
+	width: 90%;
+	background-color: white;
+	margin-left: 5%;
+	border-radius: 10px;
+	margin-top: 5%;
+	box-shadow: 0px 1px 3px #ccc;
+}
+
+.post4 .dp img {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: cover;
+	margin-top: 3%;
+	margin-left: 4%;
+
+}
+
+.post4 .line {
+	position: absolute;
+	left: 4%;
+	top: 12%;
+}
+
+.post4 .post-info {
+	position: absolute;
+	left: 12%;
+	top: 1%;
+	color: black;
+}
+
+.post4 .last {
+	position: absolute;
+	right: 3%;
+	top: 8%
+}
+
+.post4 .post-content p {
+	top: 30%;
+}
+
+.post4 .post-content img {
+	position: absolute;
+	width: 93%;
+	height: 490px;
+	top: 20%;
+	left: 3.5%;
+}
+
+.post4 .post-bottom {
+	bottom: 2%;
+}
+
+.friends-section {
+	position: absolute;
+	right: 0%;
+	height: 100%;
+	width: 15%;
+	background-color: none;
+}
+
+.friends-section .dp img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.friends-section .page {
+	display: flex;
+}
+
+.friends-section .friend {
+	display: flex;
+}
+
+.friend>p {
+	top: 5px;
+	left: 3%;
+}
+
+.friends-section a {
+	text-decoration: none;
+	color: black;
+}
+
+.friends-section .dp {
+	margin-top: 5%;
+	margin-left: 2%;
+}
+
+.friends-section a p {
+	margin-left: 8%;
+}
+
+.friends-section a:hover {
+	cursor: ponter;
+	display: inline block;
+	background-color: #d2d1d1;
+}
+
+.suggestions {
+	width: 350px;
+	height: 700px;
+	z-index: 5;
+	margin-top: 0%;
+	right: 3%;
+	background-color: white;
+	display: none;
+	position: absolute;
+	box-shadow: 0px 1px 3px #ccc;
+}
+
+.suggestions .last {
+	position: absolute;
+	right: 3%;
+	top: 2%;
+}
+
+.notification h3 {
+	position: absolute;
+	margin-left: 3%;
+	font-size: 25px;
+	margin-top: 1%;
+
+}
+
+.notification {
+	position: absolute;
+	display: flex;
+	margin-top: 0%;
+	height: auto;
+	width: 100%;
+	height: 30%;
+	background-color: none;
+
+}
+
+.notification .paras .para {
+	position: absolute;
+	width: 40px;
+	height: 30px;
+	background-color: #cee8fe;
+	margin-left: 10%;
+	border-radius: 50%;
+	font-size: 15px;
+	font-weight: 300;
+	margin-top: 15%;
+}
+
+.notification .paras .para p {
+	margin-top: 20%;
+	text-align: center;
+
+}
+
+.notification .paras .side {
+	position: absolute;
+	margin-left: 40%;
+	margin-top: 12%;
+	width: 40px;
+	height: 30px;
+	background-color: none;
+}
+
+.new {
+	position: absolute;
+	margin-top: 22%;
+	margin-left: 3%;
+}
+
+
+.earlier {
+	position: absolute;
+	margin-top: 55%;
+	margin-left: 3%;
+}
+
+.img img {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-size: cover;
+	margin-top: 10%;
+}
+
+.request {
+	display: flex;
+}
+
+.request .note {
+	margin-left: 8%;
+	margin-top: 0%;
+}
+
+.request .note .small {
+	font-size: 12px;
+	color: blue;
+	margin-top: 0%;
+}
+
+.request .img p {
+	background-color: #ccc;
+	position: absolute;
+	margin-left: 12%;
+	z-index: 10;
+	margin-top: 12%;
+	width: 30px;
+	height: 30px;
+	border-radius: 50px;
+}
+
+.request .img p i {
+	margin-left: 30%;
+	margin-top: 20%;
+	position: absolute;
+}
+
+.post button {
+	margin-top: 3.5%;
+	z-index: 30;
+	margin-left: 90%;
+	width: 35px;
+	height: 25px;
+	background-color: none;
+	color: white;
+	border-radius: 20px;
+}
+
+.post button i {
+	color: blue;
+}
+
+.fa,
+.far {
+	cursor: pointer;
+}
+@media(max-width:1200px) {
+	.post {
+		margin-top: 40%;
+	}
+
+	.nav-right {
+		margin-top: 10%;
+		margin-top: 13px;
+		margin-left: 85%;
+	}
+
+
+}
+
+@media(max-width:1100px) {
+	.post {
+		margin-top: 33%;
+	}
+
+	.left-panel {
+		display: none;
+	}
+
+	.container .middle-panel {
+		position: absolute;
+		background-color: none;
+		width: 70%;
+		height: 100%;
+		margin-left: 5%;
+		align-items: center;
+		overflow-x: scroll;
+	}
+
+	.friends-section {
+		position: absolute;
+		right: 0%;
+		height: 100%;
+		width: 20%;
+		background-color: none;
+	}
+
+}
+
+@media(max-width:1000px) {
+
+	.post {
+		margin-top: 35%;
+	}
+
+	.post .dp img,
+	.post1 .dp img,
+	.post2 .dp img,
+	.post3 .dp img,
+	.post4 .dp img {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-size: cover;
+		margin-top: 2%;
+		margin-left: 4%;
+	}
+
+	.story .name1 {
+		font-size: 13px;
+	}
+
+	.nav-right a {
+		height: 30px;
+		width: 30px;
+		background-size: cover;
+		border-radius: 50%;
+		cursor: pointer;
+		background-color: #ccc;
+		margin-left: 25%;
+		margin-top: 6%;
+	}
+
+	.nav-right .profile {
+		height: 30px;
+		width: 30px;
+		background-size: cover;
+		border-radius: 50%;
+		cursor: pointer;
+		background-color: #ccc;
+		margin-left: 1%;
+		margin-top: 6%;
+	}
+
+
+	
+
+}
+
+
+@media(max-width:800px) {
+	.nav .nav-middle {
+		display: none;
+	}
+
+	.left-panel {
+		display: none;
+	}
+
+	.right-panel {
+		display: none;
+	}
+
+	.middle-panel {
+		width: 100%;
+	}
+
+
+	.container .middle-panel {
+		position: absolute;
+		background-color: none;
+		width: 90%;
+		height: 100%;
+		margin-left: 5%;
+		align-items: center;
+		overflow-x: scroll;
+	}
+
+	.post {
+		margin-top: 35%;
+	}
+
+	.nav-left input {
+		width: 100px;
+		margin-left: 42%;
+		font-size: 10px;
+	}
+
+	.nav-right {
+		margin-top: 10%;
+		margin-top: 13px;
+		margin-left: 80%;
+	}
+
+	.nav .nav-left {
+		margin-top: 10px;
+	}
+
+
+	.dp-container img {
+		position: absolute;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		border: 1px solid royalblue;
+		background-size: cover;
+		margin-top: 5%;
+		margin-left: 5%;
+	}
+
+	.post3 .post-info,
+	.post2 .post-info {
+		position: absolute;
+		left: 15%;
+		top: 2%;
+	}
+
+	.post4 .post-info {
+		position: absolute;
+		left: 15%;
+		top: 1%;
+	}
+
+	.post1 .post-info {
+		position: absolute;
+		left: 15%;
+		top: 5%;
+	}
+
+	.post .dp img,
+	.post1 .dp img,
+	.post2 .dp img,
+	.post3 .dp img,
+	.post4 .dp img {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-size: cover;
+		margin-top: 2%;
+		margin-left: 4%;
+	}
+
+	.nav-right a {
+		height: 30px;
+		width: 30px;
+		background-size: cover;
+		border-radius: 50%;
+		cursor: pointer;
+		background-color: #ccc;
+		margin-left: 33%;
+		margin-top: 6%;
+	}
+
+	.nav-right .profile {
+		height: 30px;
+		width: 30px;
+		background-size: cover;
+		border-radius: 50%;
+		cursor: pointer;
+		background-color: #ccc;
+		margin-left: 0%;
+		margin-top: 6%;
+	}
+
+
+}
+
+
+
+@media(max-width:750px) {
+	.post {
+		margin-top: 35%;
+	}
+
+}
+
+@media(max-width:650px) {
+	.post {
+		margin-top: 37%;
+	}
+
+
+	.container .middle-panel {
+		position: absolute;
+		background-color: none;
+		width: 100%;
+		height: 100%;
+		margin-left: 0%;
+		align-items: center;
+		overflow-x: scroll;
+	}
+}
+
+@media(max-width:550px) {
+	.post {
+		margin-top: 42%;
+	}
+}
