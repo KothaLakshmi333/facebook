@@ -1,0 +1,78 @@
+.identity {
+	display: flex;
+}
+
+.identity input {
+	width: 200px;
+	height: 30px;
+	margin-left: 5px;
+	margin-right: 5px;
+	outline: none;
+	border: 2px solid #ccc;
+	font-size: 15px;
+	border-radius: 5px;
+}
+
+.credentials {
+	display: flex;
+	flex-direction: column;
+}
+
+.credentials input {
+	width: 430px;
+	height: 30px;
+	padding: 0px;
+	outline: none;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	border-radius: 5px;
+
+}
+
+.credentials label {
+	display: flex;
+	flex-direction: row;
+}
+
+.credentials label input {
+
+	border: 1px solid #ccc;
+	border-radius: 6px;
+
+}
+
+.terms {
+	font-size: 14px;
+}
+
+input[type="submit"] {
+	color: #fff;
+	font-size: 18px;
+	width: 200px;
+	height: 36px;
+	padding: 0 32px;
+	background-color: #00a400;
+	text-align: center;
+	justify-content: center;
+	margin-left: 25%;
+	outline: none;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+form label {
+	width: 450px;
+	height: 40px;
+	padding: 0px;
+	outline: none;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	border-radius: 5px;
+}
+
+form label input {
+	width: 100px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	margin-left: 20px;
+}

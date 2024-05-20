@@ -59,4 +59,4 @@ if (isset($_GET['postid'])) {
     // If postid is not set, send an error response
     echo "Error: postid is not set.";
 }
-?>
+
