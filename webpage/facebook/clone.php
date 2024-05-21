@@ -253,6 +253,7 @@
             </div>
             <div class="cards">
                <?php
+                  //Connect to database
                   $db = mysqli_connect("localhost", "root", "", "project");
                   
                   if ($db->connect_error) {
@@ -262,6 +263,7 @@
                   $querr = "SELECT * FROM posts";
                   $queryy = mysqli_query($db, $querr);
                   
+                  //Check the query
                   if (mysqli_num_rows($queryy) > 0) {
                       while ($row = mysqli_fetch_assoc($queryy)) {
                           $posting[] = $row["posting"];

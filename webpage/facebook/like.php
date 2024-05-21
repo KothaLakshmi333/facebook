@@ -1,11 +1,14 @@
 <?php 
+
 session_start();
-$db = mysqli_connect('localhost', 'root', '', 'project');
+// Connect to database
+$db = mysqli_connect('localhost', 'root', '', 'project'); 
 
 if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
+    die("Connection failed: " . $db->connect_error); 
 }
 
+// Check if 'postid' is present in the GET request
 if (isset($_GET['postid'])) {
     $postid = $_GET['postid'];
     $userid = $_SESSION["userid"];
@@ -19,7 +22,8 @@ if (isset($_GET['postid'])) {
     LEFT JOIN users AS person ON likes.user_id = person.id
     WHERE data.id = '$postid' AND likes.user_id = '$userid'";
     $check_result = mysqli_query($db, $check_query);
-
+    
+    //If user liked the post
     if (mysqli_num_rows($check_result) == 1) {
         $delete_query = "DELETE FROM post_likes WHERE post_id = '$postid' AND user_id = '$userid'";
         $delete_result = mysqli_query($db, $delete_query);
@@ -28,7 +32,9 @@ if (isset($_GET['postid'])) {
             $response['action'] = "unlike";
             $response['message'] = "You have unliked this post.";
         }
-    } else {
+    } 
+     //If user not liked the post
+    else {
         $querr = "INSERT INTO post_likes (user_id, post_id) VALUES ('$userid', '$postid')";
         $queryy = mysqli_query($db, $querr);
 
@@ -40,7 +46,7 @@ if (isset($_GET['postid'])) {
             $response['message'] = "Error occurred while processing your request.";
         }
     }
-
+    //Count of likes
     $count_query = "SELECT COUNT(*) AS like_count FROM post_likes WHERE post_id = '$postid'";
     $count_result = mysqli_query($db, $count_query);
 
@@ -51,7 +57,6 @@ if (isset($_GET['postid'])) {
         $response['error'] = "Error occurred while counting likes.";
     }
 
-    
 
     // Send the response back to the AJAX call
     echo json_encode($response);

@@ -1,6 +1,9 @@
 <?php
 session_start();
+// Connect to database
 require 'connection.php';
+
+// Check if form is submitted
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -14,6 +17,7 @@ if (isset($_POST['submit'])) {
         alert("password is required")
         </script>';
     }
+    //Check email and password
     $sql = "select * from users where email = '$email' and password = '$password'";
     $result = mysqli_query($db, $sql);
     if (mysqli_num_rows($result) == 1) {

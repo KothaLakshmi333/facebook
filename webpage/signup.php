@@ -1,8 +1,9 @@
 <?php
 session_start();
-
+//Connect to databse
 require 'connection.php';
 
+// Check if form is submitted
 if(isset($_POST['signup'])){
     $firstname=$_POST['firstname'];
     $surname=$_POST['surname'];
@@ -37,7 +38,7 @@ if(isset($_POST['signup'])){
         </script>'; 
     }
 
-
+    //Check email of user
     $sql="select * from users where email = '$email'";
     $result = mysqli_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
