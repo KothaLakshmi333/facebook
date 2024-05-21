@@ -299,7 +299,7 @@
                   
                   
                           echo '
-                          <div class="post1">
+                          <div class="postCard">
                               <div class="dp">
                                   <img src="./facebook/images/girl.jpg" alt="">
                               </div>

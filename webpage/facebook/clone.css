@@ -405,24 +405,18 @@
 
 }
 
-.post1 {
+.postCard {
 
-	height: 200px;
+	height: 180px;
 	margin-top: 6%;
 	background-color: white;
 	width: 90%;
 	margin-left: 5%;
 	border-radius: 10px;
 
-	/* height: 25%;
-	width: 90%;
-	background-color: white;
-	margin-left: 5%;
-	border-radius: 10px;
-	margin-top: 10%; */
 }
 
-.post1 .dp img {
+.postCard .dp img {
 	position: absolute;
 	width: 40px;
 	height: 40px;
@@ -432,27 +426,27 @@
 	margin-left: 3%;
 }
 
-.post1 .post-info {
+.postCard .post-info {
 	position: absolute;
 	margin-left: 13%;
 	margin-top: 0.5%;
 
 }
 
-.post1 .last {
+.postCard .last {
 	position: absolute;
 	margin-left: 85%;
 	margin-top: 3%;
 }
 
-.post1 .post-data {
+.postCard .post-data {
 	position: absolute;
 	margin-top: 10%;
 	margin-left: 5%;
 
 }
 
-.post1 .post-bottom {
+.postCard .post-bottom {
 	position: absolute;
 	width: 80%;
 	display: flex;
@@ -461,7 +455,7 @@
 	margin-top: 17%;
 	justify-content: space-between;
 }
-.post1 .likecard {
+.postCard .likecard {
 	position: absolute;
     margin-top: 22%;
 	margin-left: 5%;
@@ -528,7 +522,7 @@
 	position: absolute;
 	width: 93%;
 	height: 320px;
-	top: 20%;
+	top: 21%;
 	left: 3.5%;
 }
 
@@ -561,7 +555,7 @@
 .post3 .line {
 	position: absolute;
 	left: 4%;
-	top: 12%;
+	top: 11%;
 }
 
 .post3 .post-info {
@@ -617,7 +611,7 @@
 .post4 .line {
 	position: absolute;
 	left: 4%;
-	top: 12%;
+	top: 11%;
 }
 
 .post4 .post-info {
@@ -641,7 +635,7 @@
 	position: absolute;
 	width: 93%;
 	height: 490px;
-	top: 20%;
+	top: 19%;
 	left: 3.5%;
 }
 
@@ -883,7 +877,7 @@
 	}
 
 	.post .dp img,
-	.post1 .dp img,
+	.postCard .dp img,
 	.post2 .dp img,
 	.post3 .dp img,
 	.post4 .dp img {
@@ -1001,14 +995,14 @@
 		top: 1%;
 	}
 
-	.post1 .post-info {
+	.postCard .post-info {
 		position: absolute;
 		left: 15%;
 		top: 5%;
 	}
 
 	.post .dp img,
-	.post1 .dp img,
+	.postCard .dp img,
 	.post2 .dp img,
 	.post3 .dp img,
 	.post4 .dp img {

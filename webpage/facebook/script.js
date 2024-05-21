@@ -7,7 +7,7 @@ function submitForm() {
  
  
        $.ajax({
-          url: "http://localhost/files/login/facebook/action.php",
+          url: "/files/login/facebook/action.php",
           type: 'POST',
           data: formData,
           success: function (response) {
@@ -15,7 +15,7 @@ function submitForm() {
              $('.field').val('');
              console.log(response)
              var html = `
-              <div class="post1">
+              <div class="postCard">
                <div class="dp">
                    <img src="./facebook/images/girl.jpg" alt="">
                </div>
@@ -60,7 +60,7 @@ function submitForm() {
  
  
  function likedPost(element) {
-    var postCard = element.closest('.post1');
+    var postCard = element.closest('.postCard');
     if (!postCard) {
        console.error('Post card not found.');
        return;
@@ -70,7 +70,7 @@ function submitForm() {
     var postid = postCard.querySelector(".post-data").getAttribute('data-post');
  
     $.ajax({
-       url: "http://localhost/files/login/facebook/like.php",
+       url: "/files/login/facebook/like.php",
        type: 'GET',
        data: {
           postid: postid
@@ -80,8 +80,8 @@ function submitForm() {
  
           var res = JSON.parse(response);
  
-          var html1 = $(element).closest('.post1').find('.likecard').html(res.message);
-          var post1Element = $(element).closest('.post1');
+          var html1 = $(element).closest('.postCard').find('.likecard').html(res.message);
+          var post1Element = $(element).closest('.postCard');
  
  
           jQuery(postCard).prepend(html1);
