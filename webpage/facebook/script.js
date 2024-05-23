@@ -7,7 +7,7 @@ function submitForm() {
  
  
        $.ajax({
-          url: "/files/login/facebook/action.php",
+          url: "http://localhost/clone/facebook/webpage/facebook/action.php",
           type: 'POST',
           data: formData,
           success: function (response) {
@@ -70,7 +70,7 @@ function submitForm() {
     var postid = postCard.querySelector(".post-data").getAttribute('data-post');
  
     $.ajax({
-       url: "/files/login/facebook/like.php",
+       url: "http://localhost/clone/facebook/webpage/facebook/like.php",
        type: 'GET',
        data: {
           postid: postid
@@ -100,3 +100,59 @@ function submitForm() {
     });
  
  }
+function commentForm(element){
+   var postCard = element.closest('.postCard');
+   postCard.style.height = "500px";
+   var commentSymbol=postCard.querySelector('.fa-comment');
+   commentSymbol.style.color="blue";
+   var commentSection = postCard.querySelector('.commentSection');
+   commentSection.style.display="block";
+
+}
+function closecommentForm(element){
+   var postCard = element.closest('.postCard');
+   postCard.style.height = "170px";
+   var commentSymbol=postCard.querySelector('.fa-comment');
+   commentSymbol.style.color="black";
+   var commentSection = postCard.querySelector('.commentSection');
+   commentSection.style.display="none";
+
+}
+
+function submitCommentForm(element) {
+   var postCard = element.closest('.postCard');
+   var commentInput = postCard.querySelector('input[name=commenting]');
+   var comment = commentInput.value;
+   var postId = postCard.querySelector('.post-data').getAttribute('data-post');
+   console.log(postId);
+   if (comment != '') {
+      var formData = {
+         comment: comment,
+         postId: postId
+      };
+      $.ajax({
+         url: "http://localhost/clone/facebook/webpage/facebook/comment.php",
+         type: 'POST',
+         data: formData,
+         success: function (response) {
+            
+            $('.field').val('');
+            console.log(response);
+            var allCommentsDiv = postCard.querySelector('.allComments');
+            var newComment = document.createElement('p');
+            newComment.textContent = comment;
+            allCommentsDiv.prepend(newComment);
+         }
+      });
+   } else {
+      alert("please fill something");
+   }
+}
+const notification= function() {
+   document.querySelector(".fa-bell").style.color= "blue";
+   document.querySelector(".suggestions").style.display="block";
+}
+const closenotification= function() {
+   document.querySelector(".fa-bell").style.color= "black";
+   document.querySelector(".suggestions").style.display="none";
+}
