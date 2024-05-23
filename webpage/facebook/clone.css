@@ -827,6 +827,34 @@
 .far {
 	cursor: pointer;
 }
+.commentSection{
+	position:absolute;
+	width: 80%;
+	margin-left:5%;
+    height: 270px;
+    background-color: white;
+    box-shadow: 0px 1px 3px #ccc;
+	border-radius: 10px;
+	display:none;
+	margin-top:30%;
+} 
+.allComments{
+	width: 500px;
+    height: 190px;
+    margin-left: 4%;
+	overflow-y: auto;
+
+}
+.commentSection .field{
+	height: 30px;
+    border: none;
+    border-radius: 25px;
+    background-color: #eee;
+    text-align: center;
+    width: 85%;
+	margin-left:5%;
+	
+}
 @media(max-width:1200px) {
 	.post {
 		margin-top: 40%;

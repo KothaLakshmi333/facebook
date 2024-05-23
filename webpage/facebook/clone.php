@@ -267,6 +267,7 @@
                           $posting[] = $row["posting"];
                           $id[] = $row["id"];
                       }
+
                   
                       foreach ($posting as $key => $value) {
                           $userId = $_SESSION["userid"];
@@ -286,16 +287,10 @@
                           $count_row = mysqli_fetch_assoc($count_result);
                           $like_count = $count_row['like_count'];
                   
-                          // Get the names of users who liked the post
-                          $names_query = "SELECT users.firstname FROM users 
-                                          JOIN post_likes ON users.id = post_likes.user_id 
-                                          WHERE post_likes.post_id = '$postId'";
-                          $names_result = mysqli_query($db, $names_query);
-                          $userNames = [];
-                          while ($row = mysqli_fetch_assoc($names_result)) {
-                              $userNames[] = $row['firstname'] . " liked this post";
-                          }
-                          $likedByNames = implode('<br>', $userNames);
+                          // Get the comments of users who commented for the posts
+                          $commentQuery = "SELECT comment FROM comments WHERE post_id = '$postId'";
+                          $commentResult = mysqli_query($db, $commentQuery);
+                          
                   
                   
                           echo '
@@ -318,7 +313,7 @@
                                       <span class="like_count"> ' . $like_count . ' Likes</span>
                                   </div>
                                   <div class="comment">
-                                      <i class="far fa-comment" onclick="comment()"></i>
+                                      <i class="far fa-comment" onclick=commentForm(this)  ondblclick=closecommentForm(this)></i>
                                       <span>Comment</span>
                                   </div>
                                   <div class="share">
@@ -333,6 +328,25 @@
                               echo $response;
                           }
                           echo '</div>
+                                <div class="commentSection">  
+                                     <div class="allComments">';
+                                     while ($commentRow = mysqli_fetch_assoc($commentResult)) {
+                                       echo '<p>' . htmlspecialchars($commentRow['comment']) . '</p>';
+                                   }
+                               
+                                   echo '
+
+                                      </div>
+                                       
+                                          <form action=" " name="myform" class="clear">
+                                              <input class="field"type="text" placeholder="write a comment.." name="commenting"/>
+                                              <button class="enter" type="button" onclick=submitCommentForm(this) value="comment" name="comment" placeholder="post">
+                                                  <i class="fas">&#xf075;</i>
+                                              </button>
+                                          </form>
+                                          <p><br></p>
+
+                                 </div>
                           </div>';
                           
                       }
