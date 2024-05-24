@@ -407,13 +407,13 @@
 
 .postCard {
 
-	height: 180px;
-	margin-top: 6%;
-	background-color: white;
-	width: 90%;
-	margin-left: 5%;
-	border-radius: 10px;
-
+	height: 210px;
+    margin-top: 6%;
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    transition: height 0.3s ease, min-height 0.3s ease;
 }
 
 .postCard .dp img {
@@ -827,33 +827,46 @@
 .far {
 	cursor: pointer;
 }
-.commentSection{
+.postCard .commentSection{
 	position:absolute;
 	width: 80%;
 	margin-left:5%;
-    height: 270px;
+    height: auto;
     background-color: white;
     box-shadow: 0px 1px 3px #ccc;
 	border-radius: 10px;
 	display:none;
+	z-index:30;
 	margin-top:30%;
 } 
 .allComments{
 	width: 500px;
-    height: 190px;
+    height: auto;
     margin-left: 4%;
-	overflow-y: auto;
 
 }
 .commentSection .field{
 	height: 30px;
     border: none;
     border-radius: 25px;
-    background-color: #eee;
+    background-color: white;
     text-align: center;
     width: 85%;
 	margin-left:5%;
+	border:1px solid;
+	margin:10px;
 	
+}
+.commentSection .comments{
+	height: 50px;
+	border: none;
+	border-radius: 5px;
+	background-color: #eee;
+	width: 85%;
+	display: flex;
+	align-items: center;  
+	padding-left: 10px; 
+	margin:20px;
 }
 @media(max-width:1200px) {
 	.post {

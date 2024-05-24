@@ -7,7 +7,7 @@ function submitForm() {
 
 
       $.ajax({
-         url: "/files/login/facebook/action.php",
+         url: "facebook/action.php",
          type: 'POST',
          data: formData,
          success: function (response) {
@@ -70,7 +70,7 @@ function likedPost(element) {
    var postid = postCard.querySelector(".post-data").getAttribute('data-post');
 
    $.ajax({
-      url: "/files/login/facebook/like.php",
+      url: "facebook/like.php",
       type: 'GET',
       data: {
          postid: postid
@@ -102,16 +102,22 @@ function likedPost(element) {
 }
 function commentForm(element){
   var postCard = element.closest('.postCard');
-  postCard.style.height = "500px";
   var commentSymbol=postCard.querySelector('.fa-comment');
   commentSymbol.style.color="blue";
   var commentSection = postCard.querySelector('.commentSection');
   commentSection.style.display="block";
+  
+  var postCardHeight = postCard.scrollHeight;
+  var commentSectionHeight = commentSection.scrollHeight;
+  var totalHeight = postCardHeight + commentSectionHeight;
+
+
+   postCard.style.height = totalHeight + "px";
 
 }
 function closecommentForm(element){
   var postCard = element.closest('.postCard');
-  postCard.style.height = "170px";
+  postCard.style.height = "210px";
   var commentSymbol=postCard.querySelector('.fa-comment');
   commentSymbol.style.color="black";
   var commentSection = postCard.querySelector('.commentSection');
@@ -131,17 +137,24 @@ function submitCommentForm(element) {
         postId: postId
      };
      $.ajax({
-        url: "/files/login/facebook/comment.php",
+        url: "facebook/comment.php",
         type: 'POST',
         data: formData,
         success: function (response) {
            
            $('.field').val('');
            console.log(response);
-           var allCommentsDiv = postCard.querySelector('.allComments');
-           var newComment = document.createElement('p');
-           newComment.textContent = comment;
-           allCommentsDiv.prepend(newComment);
+           var commentsDiv = postCard.querySelector('.allComments');
+           var newCommentDiv = document.createElement('div'); 
+           newCommentDiv.classList.add('comments'); 
+           var newCommentP = document.createElement('p');
+           newCommentP.textContent =comment;
+           newCommentDiv.appendChild(newCommentP); 
+           commentsDiv.appendChild(newCommentDiv); 
+           var commentSection = postCard.querySelector('.commentSection');
+           var commentSectionHeight = commentSection.scrollHeight;
+           var newHeight = 210 + commentSectionHeight; 
+           postCard.style.height = newHeight + "px";
         }
      });
   } else {

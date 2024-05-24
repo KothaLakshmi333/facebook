@@ -323,30 +323,31 @@
                               </div>
                               <div class="likecard">';
                           
-                          // Display the like message only for the session user
-                          if ($userLiked) {
-                              echo $response;
-                          }
-                          echo '</div>
-                                <div class="commentSection">  
-                                     <div class="allComments">';
-                                     while ($commentRow = mysqli_fetch_assoc($commentResult)) {
-                                       echo '<p>' . htmlspecialchars($commentRow['comment']) . '</p>';
-                                   }
+                              // Display the like message only for the session user
+                                 if ($userLiked) {
+                                    echo $response;
+                                 }
+                                  echo '</div>
+                                        <div class="commentSection">  
+                                           <div class="allComments">';
+                                              while ($commentRow = mysqli_fetch_assoc($commentResult)) {
+                                                  echo '<div class="comments">';
+                                                  echo '<p>' . htmlspecialchars($commentRow['comment']) . '</p>';
+                                                  echo '</div>';
+                                                }
                                
-                                   echo '
+                                                 echo '
 
-                                      </div>
+                                             </div>
                                        
-                                          <form action=" " name="myform" class="clear">
-                                              <input class="field"type="text" placeholder="write a comment.." name="commenting"/>
-                                              <button class="enter" type="button" onclick=submitCommentForm(this) value="comment" name="comment" placeholder="post">
-                                                  <i class="fas">&#xf075;</i>
-                                              </button>
-                                          </form>
-                                          <p><br></p>
+                                                 <form action=" " name="myform" class="clear">
+                                                    <input class="field"type="text" placeholder="write a comment.." name="commenting"/>
+                                                    <button class="enter" type="button" onclick=submitCommentForm(this) value="comment" name="comment" placeholder="post">
+                                                       <i class="fas">&#xf075;</i>
+                                                    </button>
+                                                 </form>
 
-                                 </div>
+                               </div>
                           </div>';
                           
                       }
